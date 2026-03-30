@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Наша история — уже 212 дней вместе ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(to bottom, #fffaf0, #f8e8f0, #f0e8ff, #e8f4ff);
+      color: #2d1b3a;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    section:not(.hero) {
+      background: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(248,232,240,0.5), rgba(240,232,255,0.6));
+      backdrop-filter: blur(4px);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffebee 0%, #f3e5f5 50%, #e3f2fd 100%);
+      color: #4a148c;
+    }
+
+    .month {
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .month::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(255,245,250,0.65), rgba(240,248,255,0.7), rgba(248,232,240,0.6));
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      background: rgba(255, 255, 255, 0.82);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    h1, h2 {
+      margin: 0.5em 0;
+      color: #6a1b9a;
+    }
+
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 2.4rem; }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .photos img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(100, 80, 120, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .photos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 16px 48px rgba(100, 80, 120, 0.25);
+    }
+
+    .heart {
+      color: #e91e63;
+      font-size: 1.6rem;
+      margin: 30px 0 10px;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(120vh) rotate(0deg); }
+      100% { transform: translateY(-40vh) rotate(720deg); }
+    }
+
+    @media (max-width: 768px) {
+      .photos img { width: 240px; height: 240px; }
+      .content { padding: 30px 20px; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="content">
+      <h1>28 августа 2025</h1>
+      <h2>День, когда я понял, что моя жизнь только начинается</h2>
+      <p style="font-size:1.3em; margin:40px 0;">Потому что появилась ты ❤️<br>Уже 212 дней… и каждый следующий — лучше предыдущего</p>
+      <p>Крути вниз — наша история по месяцам ↓</p>
+    </div>
+  </section>
+
+  <!-- Все месяцы (оставил как у тебя) -->
+  <section class="month" style="background-image:url('photos/aug-sep.jpg');">
+    <div class="content">
+      <h2>Август — Сентябрь 2025</h2>
+      <p>Первая встреча, первые сообщения до утра, первый поцелуй.<br>Ты улыбнулась — и я пропал навсегда.</p>
+      <div class="photos">
+        <img src="2026-03-18 21.43.01.jpg" alt="">
+        <img src="2026-03-18 21.43.12.jpg" alt="">
+        <img src="2026-03-18 21.43.14.jpg" alt="">
+      </div>
+      <p class="heart">Люблю тебя за:</p>
+      <ul style="text-align:left; max-width:600px;">
+        <li>то, как ты смущалась от моих постоянных комплиментов</li>
+        <li>наш первый «пока» который длился 40 минут</li>
+        <li>твоё «ты не можешь быть таким идеальным»</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Остальные месяцы (твои версии) — оставил без изменений -->
+  <section class="month" style="background-image:url('photos/sep.jpg');">
+    <div class="content">
+      <h2>Сентябрь 2025</h2>
+      <p>Конец сентября — ты впервые приехала ко мне в Минск. Я очень переживал перед нашей первой встречей. А когда ты вышла из поезда и улыбнулась — весь город стал ярче.</p>
+      <div class="photos">
+        <img src="2026-03-22 15.26.33.jpg">
+        <img src="2026-03-22 15.26.31.jpg">
+        <img src="2026-03-22 15.26.21.jpg">
+      </div>
+      <p class="heart">Люблю тебя за:</p>
+      <ul style="text-align:left; max-width:600px;">
+        <li>то, как мы смотрела меня как на маньяка с бородой</li>
+        <li>то, как мы оставляли свои отпечатки рук на холсте</li>
+        <li>то, как мы расписывались, якобы женимся</li>
+        <li>то, что каждая наша встреча для меня самая ценная и дорогая</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Октябрь, Ноябрь, Январь, Февраль, Март — оставил как было у тебя -->
+
+  <section class="month" style="background-image:url('photos/oct.jpg');">
+    <div class="content">
+      <h2>Октябрь 2025</h2>
+      <p>Поездка в усадьбу Здравнёва — один из моих любимых дней. Осень, золотые листья, мы бродили по аллеям, как в старом фильме. Ты фотографировала всё подряд, а я фотографировал тебя. Там я впервые подумал: «Я хочу таких дней тысячи».</p>
+      <div class="photos">
+        <img src="2026-03-22 15.31.01.jpg">
+        <img src="2026-03-22 15.30.58.jpg">
+        <img src="2026-03-22 15.30.56.jpg">
+      </div>
+      <p class="heart">Люблю тебя за:</p>
+      <ul style="text-align:left; max-width:600px;">
+        <li>как ты смешно читала стихи написанные на табличках</li>
+        <li>за то как мы пели федука в машине</li>
+        <li>момент, когда ты просто положила голову мне на плечо и на душе стало так спокойно</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="month" style="background-image:url('photos/nov.jpg');">
+    <div class="content">
+      <h2>Ноябрь 2025</h2>
+      <p>Наши дни рождения — месяц, полный тепла посреди осенней хандры. Мы отмечали по очереди: торт, свечи, подарки и куча объятий. Сначала мой подарок, затем твой. И каждый раз, когда ты задувала свечи, я загадывал одно и то же — чтобы мы всегда были вместе.</p>
+      <div class="photos">
+        <img src="2026-03-22 15.39.33.jpg" alt="Твой день рождения">
+        <img src="2026-03-22 15.39.31.jpg" alt="Мой день рождения">
+        <img src="2026-03-27 12.12.38.jpg" alt="Мы с тортом">
+      </div>
+      <p class="heart">Люблю тебя за:</p>
+      <ul style="text-align:left; max-width:600px;">
+        <li>твой восторг от даже самого простого подарка</li>
+        <li>то, что сделала мой день рождения самым лучшим за эти 20 лет</li>
+        <li>письмо, которое ты мне написала и оно растрогало меня до ужаса</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="month" style="background-image:url('photos/jan.jpg');">
+    <div class="content">
+      <h2>Январь 2026</h2>
+      <p>После новогодней магии — самые тёплые будни. Мы возвращались к учёбе, но каждый вечер был как маленький праздник. Ты стала ещё роднее, а я понял, что хочу делить с тобой не только праздники, но и всю обычную жизнь.</p>
+      <div class="photos">
+        <img src="2026-03-22 15.46.57.jpg" alt="Уютный вечер дома">
+        <img src="2026-03-22 15.46.53.jpg" alt="Мы с чашками чая">
+        <img src="2026-03-22 15.46.55.jpg" alt="Зимний город вместе">
+      </div>
+      <p class="heart">Люблю тебя за:</p>
+      <ul style="text-align:left; max-width:600px;">
+        <li>как ты слушала мои указания в зале</li>
+        <li>твоё «я соскучилась» даже если виделись утром</li>
+        <li>моменты, когда мы просто молчим рядом и всё идеально</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="month" style="background-image:url('photos/feb.jpg'); background-position: center;">
+    <div class="content">
+      <h2>Февраль 2026</h2>
+      <p>Месяц, когда любовь стала ещё очевиднее. 14 февраля — цветы, ужин при свечах, твоя улыбка ярче всех гирлянд. Но на самом деле каждый день был особенным: внезапные объятия, «я люблю тебя» в самых неожиданных моментах. Зима отступала, а мы становились ближе.</p>
+      <div class="photos">
+        <img src="2026-03-27 11.59.52.jpg" alt="14 февраля, цветы">
+        <img src="2026-03-27 11.59.50.jpg" alt="Романтический ужин">
+        <img src="2026-03-28 09.42.04.jpg" alt="Мы в снегу или на прогулке">
+      </div>
+      <p class="heart">Люблю тебя за:</p>
+      <ul style="text-align:left; max-width:600px;">
+        <li>как ты краснеешь от моих комплиментов даже спустя полгода</li>
+        <li>наши разговоры под бутылочку шампанского</li>
+        <li>поцелуи, от которых до сих пор кружится голова</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="month" style="background-image:url('photos/mar.jpg');">
+    <div class="content">
+      <h2>Март 2026</h2>
+      <p>Весна пришла вместе с тобой. Первые тёплые лучи, подснежники, прогулки без шапок и курток. Уже больше 200 дней вместе — и каждый новый день я влюбляюсь заново. Ты — моя весна, моё солнце, мой самый любимый человек. И это только начало нашей большой истории.</p>
+      <div class="photos">
+        <img src="2026-03-27 12.04.11.jpg" alt="Первая весенняя прогулка">
+        <img src="2026-03-27 12.04.09.jpg" alt="Ты улыбаешься солнцу">
+        <img src="2026-03-27 12.05.11.jpg" alt="Мы сейчас, март 2026">
+      </div>
+      <p class="heart">Люблю тебя за:</p>
+      <ul style="text-align:left; max-width:600px;">
+        <li>как ты радуешься первым цветам и тёплому ветру</li>
+        <li>твою лёгкость и смех, который заразителен</li>
+        <li>то, что с тобой будущее кажется ярким и счастливым</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Финальный блок (обновлённый, без таймера) -->
+  <section style="background: linear-gradient(135deg, #5d1b8a 0%, #9c27b0 45%, #e91e63 100%); color: white; position: relative; overflow: hidden;">
+    <div class="content" style="background: rgba(0,0,0,0.38); border: none; box-shadow: 0 20px 80px rgba(0,0,0,0.55); max-width: 1100px; padding: 70px 50px; position: relative; z-index: 2;">
+      
+      <h2 style="font-size: 3.5rem; margin-bottom: 40px; text-shadow: 0 5px 25px rgba(0,0,0,0.6); color: #ffffff;">
+        Почему я тебя люблю ❤️
+      </h2>
+
+      <div class="reasons" style="columns: 3; column-gap: 55px; font-size: 1.28rem; line-height: 1.95; text-align: left;">
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">1. За твои глаза — в них я каждый раз теряюсь и нахожу дом одновременно</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">2. За то, как ты смеёшься над моими глупыми шутками</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">3. За твои холодные ладошки, которые я грею в своих</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">4. За «ещё пять минуточек» перед поездом</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">5. За то, как ты танцуешь, когда думаешь, что я не вижу</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">6. За твой запах — он успокаивает меня лучше всего на свете</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">7. За то, как ты всегда чувствуешь, когда мне плохо</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">8. За твои странные привычки, которые я обожаю</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">9. За то, что ты остаёшься собой даже в мои худшие дни</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">10. За твои «я тоже тебя люблю», сказанные шёпотом</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">11. За то, как ты краснеешь от моих комплиментов</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">12. За наши тики-токи и дурацкие видео</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">13. За наши вечерние посиделки в машине</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">14. За то, что с тобой время летит и тянется одновременно</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">15. За твою заботу о мелочах</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">16. За твою улыбку, от которой у меня до сих пор бабочки</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">17. За то, как ты мечтаешь вслух</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">18. За наши совместные приключения и поездки</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">19. За каждый день, который с тобой лучше предыдущего</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">20. За то, что ты выбрала именно меня</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">21. За то, как ты смотришь на меня, когда думаешь, что я не вижу</p>
+        <p style="color: #ffffff; text-shadow: 0 1px 5px rgba(0,0,0,0.85); margin: 0.85em 0;">22. За то, что ты — это ты. Моя самая большая удача в жизни ❤️</p>
+      </div>
+
+      <p style="font-size: 2rem; margin-top: 80px; font-weight: 300; color: #ffffff; text-shadow: 0 3px 15px rgba(0,0,0,0.5); line-height: 1.4;">
+        Это только начало нашей истории.<br>
+        Я люблю тебя сегодня сильнее, чем вчера,<br>
+        и буду любить ещё сильнее завтра.
+      </p>
+
+      <p style="margin-top: 50px; font-size: 1.4rem; opacity: 0.9;">
+        Спасибо, что ты есть у меня ❤️
+      </p>
+
+    </div>
+
+    <!-- Плавающие сердечки -->
+    <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1;">
+      <div class="floating-heart" style="position: absolute; font-size: 3.8rem; opacity: 0.35; animation: float 16s infinite linear; left: 8%; animation-delay: -2s;">❤️</div>
+      <div class="floating-heart" style="position: absolute; font-size: 2.4rem; opacity: 0.28; animation: float 22s infinite linear; left: 18%; animation-delay: -5s;">💜</div>
+      <div class="floating-heart" style="position: absolute; font-size: 4.5rem; opacity: 0.22; animation: float 28s infinite linear; left: 32%; animation-delay: -9s;">💕</div>
+      <div class="floating-heart" style="position: absolute; font-size: 3.2rem; opacity: 0.32; animation: float 19s infinite linear; left: 45%; animation-delay: -12s;">💖</div>
+      <div class="floating-heart" style="position: absolute; font-size: 2.8rem; opacity: 0.30; animation: float 24s infinite linear; left: 58%; animation-delay: -3s;">❤️‍🔥</div>
+      <div class="floating-heart" style="position: absolute; font-size: 5rem; opacity: 0.18; animation: float 32s infinite linear; left: 68%; animation-delay: -15s;">💞</div>
+      <div class="floating-heart" style="position: absolute; font-size: 3.5rem; opacity: 0.34; animation: float 18s infinite linear; left: 82%; animation-delay: -7s;">💗</div>
+      <div class="floating-heart" style="position: absolute; font-size: 2.6rem; opacity: 0.29; animation: float 26s infinite linear; left: 12%; animation-delay: -18s;">💓</div>
+      <div class="floating-heart" style="position: absolute; font-size: 4.2rem; opacity: 0.24; animation: float 30s infinite linear; left: 38%; animation-delay: -10s;">❤️</div>
+      <div class="floating-heart" style="position: absolute; font-size: 3rem; opacity: 0.33; animation: float 20s infinite linear; left: 55%; animation-delay: -4s;">💘</div>
+    </div>
+  </section>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray("section").forEach(section => {
+      const content = section.querySelector(".content");
+      const photos = section.querySelectorAll(".photos img");
+      const title = section.querySelector("h2");
+      const text = section.querySelector("p:not(.heart)");
+      const heartList = section.querySelector(".heart");
+
+      gsap.set([content, photos, title, text, heartList], { opacity: 0, y: 60 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 75%",
+          toggleActions: "play none none reverse"
+        }
+      });
+
+      tl.to(content, { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" })
+        .to(title, { opacity: 1, y: 0, duration: 0.9 }, "-=0.8")
+        .to(text, { opacity: 1, y: 0, duration: 1, stagger: 0.2 }, "-=0.7")
+        .to(photos, { opacity: 1, y: 0, duration: 1.1, stagger: 0.15, ease: "back.out(1.4)" }, "-=0.9")
+        .to(heartList, { opacity: 1, scale: 1, duration: 0.8, ease: "elastic.out(1, 0.5)" }, "-=0.6");
+    });
+
+    // Hover на фото
+    document.querySelectorAll(".photos img").forEach(img => {
+      img.addEventListener("mouseenter", () => gsap.to(img, { scale: 1.08, rotation: 2, duration: 0.5 }));
+      img.addEventListener("mouseleave", () => gsap.to(img, { scale: 1, rotation: 0, duration: 0.6 }));
+    });
+  </script>
+</body>
+</html>
